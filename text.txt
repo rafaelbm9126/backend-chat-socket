@@ -1,0 +1,9 @@
+const object = {
+    usid: '00000000',
+    sok: '00000000',
+    rmid: '00000000',
+    name: 'Test',
+    active: false,
+};
+
+

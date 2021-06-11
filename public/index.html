@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat Power</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container clearfix">
+      <div class="people-list" id="people-list">
+        <div class="user-name-text"></div>
+        <div class="expand">&#8594;</div>
+        <div class="credentials">
+          <div class="cred-content">
+            <input
+              class="input-config"
+              type="text"
+              id="id-user"
+              placeholder="ID User"
+            />
+            <br />
+            <input
+              class="input-config"
+              type="text"
+              id="name-user"
+              placeholder="Name User"
+            />
+            <br />
+            <button class="btn-connect">Connect</button>
+            <br />
+            <hr />
+            <br />
+            <input
+              class="input-config"
+              type="text"
+              id="id-room"
+              placeholder="ID Room"
+              value="lima_group"
+            />
+            <br />
+            <input
+              class="input-config"
+              type="text"
+              id="name-room"
+              placeholder="Name Room"
+              value="Lima Conference"
+            />
+            <br />
+            <button class="btn-connect-to-room">Connect to Room</button>
+          </div>
+        </div>
+        <ul class="list" id="integrants">
+          <!-- here integrants -->
+        </ul>
+      </div>
+
+      <div class="chat">
+        <div class="chat-header clearfix">
+          <div class="chat-about">
+            <div class="chat-with"></div>
+          </div>
+          <i class="fa fa-star"></i>
+        </div>
+
+        <div class="chat-history">
+          <ul id="message-list">
+            <!-- here messages -->
+          </ul>
+        </div>
+
+        <div class="chat-message clearfix">
+          <textarea
+            name="message-to-send"
+            id="message-to-send"
+            placeholder="Type your message"
+            rows="3"
+            disabled
+          ></textarea>
+
+          <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+          <i class="fa fa-file-image-o"></i>
+
+          <button disabled id="send-msg">Send</button>
+        </div>
+      </div>
+      <div class="alert">
+        <div class="alert-icon"></div>
+        <span>Message</span>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
